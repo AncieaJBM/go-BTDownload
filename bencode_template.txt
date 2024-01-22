@@ -1,0 +1,41 @@
+d
+    8:announce
+    34:http://tracker.opentrackr.org:1337/announce
+
+    13:announce-list
+    l
+        l
+            34:http://tracker.opentrackr.org:1337/announce
+        e
+        l
+            44:http://tracker.internetwarriors.net:1337/announce
+            l
+                53:udp://tracker.opentrackr.org:1337/announce
+            e
+        e
+    e
+
+    4:info
+    d
+        6:length
+        i123456789e
+
+        4:name
+        13:SampleTorrent
+
+        12:piece length
+        i16384e
+
+        6:pieces
+        2000:0123456789abcdefghijklmnopqrstuvwxyzabcdef[...]
+    e
+
+    7:private
+    i1
+e
+
+在这个.torrent文件中，第一项键值对的键是"announce"，对应一个字符串（string）类型的值。第二项键值对的键是"announce-list"，对应一个列表（list）类型的值，其中又包含了两个列表。
+
+第三项键值对的键是"info"，对应一个嵌套的字典类型的值。这个字典类型中包含了相关的文件信息，如文件名、文件大小、分片大小以及分片哈希值等。
+
+
