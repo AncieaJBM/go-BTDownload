@@ -1,6 +1,7 @@
 #### BT下载器流程
 
-![782a19928f1222a33d8b7cdd5f3fab41](/Users/cheryl/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/nt_qq_a4953b8b191aedc74c727c2cad45987d/nt_data/Pic/2024-01/Ori/782a19928f1222a33d8b7cdd5f3fab41.png)
+![782a19928f1222a33d8b7cdd5f3fab41](https://github.com/AncieaJBM/go-BTDownload/assets/157377021/003df1ab-5791-4333-b584-d4460c02309e)
+
 
 1、MsgPiece消息用于发送一个块（piece）的数据给对端。消息格式如下：
 
