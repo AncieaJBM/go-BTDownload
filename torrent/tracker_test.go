@@ -9,7 +9,7 @@ import (
 )
 
 func TestTracker(t *testing.T) {
-	file, _ := os.Open("../testfile/debian-iso.torrent")
+	file, _ := os.Open("../testfile/debian-12.4.0-amd64-netinst.iso.torrent")
 	tf, _ := ParseFile(bufio.NewReader(file))
 
 	var peerId [IDLEN]byte
