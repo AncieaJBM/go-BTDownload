@@ -165,6 +165,7 @@ func GetHaveIndex(msg *PeerMsg) (int, error) {
 	return index, nil
 }
 
+// send
 func NewRequestMsg(index, offset, length int) *PeerMsg {
 	payload := make([]byte, 12)
 	binary.BigEndian.PutUint32(payload[0:4], uint32(index))
@@ -202,4 +203,25 @@ func NewConn(peer PeerInfo, infoSHA [SHALEN]byte, peerId [IDLEN]byte) (*PeerConn
 		return nil, err
 	}
 	return c, nil
+}
+
+// 二分查找非递归实现
+func binarySearch(target int64, nums []int64) int {
+	left := 0
+	right := len(nums)
+	for left <= right {
+		mid := left + (right-left)/2
+		if target == nums[mid] {
+			return mid
+		}
+		if target > nums[mid] {
+			left = mid + 1
+			continue
+		}
+		if target < nums[mid] {
+			right = mid - 1
+			continue
+		}
+	}
+	return -1
 }
