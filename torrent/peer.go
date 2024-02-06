@@ -207,21 +207,5 @@ func NewConn(peer PeerInfo, infoSHA [SHALEN]byte, peerId [IDLEN]byte) (*PeerConn
 
 // 二分查找非递归实现
 func binarySearch(target int64, nums []int64) int {
-	left := 0
-	right := len(nums)
-	for left <= right {
-		mid := left + (right-left)/2
-		if target == nums[mid] {
-			return mid
-		}
-		if target > nums[mid] {
-			left = mid + 1
-			continue
-		}
-		if target < nums[mid] {
-			right = mid - 1
-			continue
-		}
-	}
 	return -1
 }
